@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"  >
+
+    <data>
+        <variable
+            name="itemUserViewModel"
+            type="com.zhenhua.mvvmdemo.viewmodel.ItemUserViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vertical_margin_half"
+        android:layout_marginLeft="@dimen/vertical_margin"
+        android:layout_marginRight="@dimen/vertical_margin"
+        android:layout_marginTop="@dimen/vertical_margin_half"
+        card_view:cardCornerRadius="2dp">
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:onClick="@{itemUserViewModel.onItemClick}">
+        <TextView
+            android:id="@+id/tv_userId"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@{itemUserViewModel.userId}"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@{itemUserViewModel.userName}"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_phoneNum"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@{itemUserViewModel.phoneNum}"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@{itemUserViewModel.sex}"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center"/>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
